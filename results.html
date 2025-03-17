@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Are You Lucky?</h1>
+        <img src="images/test-your-luck-answers.jpg" alt="Results" class="results-image">
+        <p id="result-text"></p>
+        <a href="game.html" class="cta-button">Play Again</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const number = params.get("number");
+            const prizes = {
+                "1": "$25",
+                "2": "$35",
+                "3": "$25",
+                "4": "$40",
+                "5": "$35",
+                "6": "$25",
+                "7": "$35",
+                "8": "$25",
+                "9": "$35"
+            };
+
+            const resultText = document.getElementById("result-text");
+            if (number && prizes[number]) {
+                resultText.textContent = `You picked number ${number}! Your prize is: ${prizes[number]}`;
+            } else {
+                resultText.textContent = "Something went wrong. Try again!";
+            }
+        });
+    </script>
+</body>
+</html>

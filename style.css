@@ -1,0 +1,90 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #138808;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Index Page */
+.index-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/index-bg.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.lucky-btn {
+    position: absolute;
+    bottom: 20%;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.lucky-btn:hover {
+    background-color: #ffdd44;
+    transform: scale(1.1);
+}
+
+/* Game Page */
+.game-container {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+}
+
+/* Number Buttons Overlay */
+.number-buttons {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.game-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.game-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Reveal Box */
+#result-box {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    background: yellow;
+    color: black;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    visibility: hidden;
+}
